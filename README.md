@@ -56,19 +56,5 @@ We've provided an endpoint for the stats at https://bbc.github.io/sport-app-dev-
 ## Checkout
 * Checkout: `git clone git@github.com:bbc/sport-app-dev-tech-challenge.git`
 
-
-## Sending a message
-To send the mock message to the SNS you can use the following command:
-`awslocal sns publish --topic-arn local-sportsdata-notification --message {"url":"localhost:3001"}`
-
-## A little bit of help getting started
-If you're feeling this is a bit much to start with then there are two areas you could focus on to help you on your way:
-
-### Creating the API
-Saving some data directly to Redis and simply building the API that retrieves the data would be a great start! It'd give you a starting point and provide the first part of the interface.
-
-### Reading from the SQS
-Simply reading from the SQS would be a great first step in getting the data!
-
 ## I'm pairing on this exercise, what do I need?
 Thanks for volunteering! To pair with a candidate all you need is either Xcode or Android Studio, depending on their preference.
