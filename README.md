@@ -44,8 +44,8 @@ We'd like to see how you go about tackling a problem whilst working with others.
 
 
 ## Data
-We've provided a json feed at https://raw.githubusercontent.com/bbc/sport-app-dev-tech-challenge/master/data/data
-We've provided an endpoint for the stats at https://raw.githubusercontent.com/bbc/sport-app-dev-challenge/data/stats
+We've provided a json feed at https://bbc.github.io/sport-app-dev-tech-challenge/data.json
+We've provided an endpoint for the stats at https://bbc.github.io/sport-app-dev-tech-challenge/stats
   Example stats:
     https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats?event=display&data=1235
     https://raw.githubusercontent.com/fmtvp/recruit-test-data/master/stats?event=error&data=its%20all%20gone%20to%20pot
