@@ -1,8 +1,6 @@
 # Sport App Dev Tech Challenge
 BBC Sport App Developer Technical Assessment
 
-![architecture diagram](https://github.com/bbc/sport-backend-dev-tech-challenge/blob/master/resources/backend-tech-challenge-architecture-diagram.jpg "Tech Challenge Architecture Diagram")
-
 ## The Challenge
 
 This challenge is all about your mobile application developer skills. The rough idea is that you:
