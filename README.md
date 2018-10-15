@@ -1,7 +1,7 @@
 # Sport App Dev Tech Challenge
 BBC Sport App Developer Technical Assessment
 
-![my sport formula 1](https://github.com/bbc/sport-app-dev-tech-challenge/blob/master/resources/IMG_4209.PNG "My Sport Formula 1")
+<img src="https://github.com/bbc/sport-app-dev-tech-challenge/blob/master/resources/IMG_4209.PNG" alt="MySport Formula 1" width="30%">
 
 ## The Challenge
 
