@@ -1,16 +1,18 @@
 # Sport App Dev Tech Challenge
 BBC Sport App Developer Technical Assessment
 
+![my sport formula 1](https://github.com/bbc/sport-app-dev-tech-challenge/blob/master/resources/IMG_4209.PNG "My Sport Formula 1")
+
 ## The Challenge
 
 This challenge is all about your mobile application developer skills. The rough idea is that you:
 
 * make a call to a url to retrieve some data
 * represent that data in an application
-* display that data in a user friendly way that allows the user to set some preferences.
+* display that data in a user friendly.
 * write stats about app usage to a url
 
-So that means you're really creating part of a mini sport app! We're going to focus on displaying notification data via an API. This is a small slice of the same tech we use to power all of the data to our 25 million strong audience! Pretty cool :)
+The data is the same format as we use for the MySport feature in the app. So that means you're really creating part of a mini sport app! We're going to focus on displaying some Formaula 1 headlines data via an API. This is a small slice of the same tech we use to power all of the data to our 25 million strong audience! Pretty cool :)
 
 When it comes to tech here we like Swift (https://developer.apple.com/swift/) for iOS and Kotlin (https://kotlinlang.org/docs/reference/android-overview.html) for Android, but you're free to use any language you feel comfortable with. You can also:
 
@@ -34,9 +36,7 @@ We'd like to see how you go about tackling a problem whilst working with others.
 ## Spec
 * Read some sport story data (json)
 * Parse the data
-* Display the data in the app in a way that allows the user to navigate the data and set preferences 
-* Allow the user to navigate the data and set some preferences
-* Save the preferences for recall next time the data is displayed
+* Display the data in the app in a way similar to the image above 
 * Record statistics about the app use:
   * The command is “event” and the parameters are “load”, “display” and “error”.
   * “load” and “display” should be followed by a “data” parameter containing the time in milliseconds.
