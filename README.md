@@ -36,7 +36,8 @@ We'd like to see how you go about tackling a problem whilst working with others.
 ## Spec
 * Read some sport story data (json)
 * Parse the data
-* Display the data in the app in a way similar to the image above 
+* Display the data in the app in a way similar to the image above
+* Allow a forward journey to the appropriate article
 * Record statistics about the app use:
   * The command is “event” and the parameters are “load”, “display” and “error”.
   * “load” and “display” should be followed by a “data” parameter containing the time in milliseconds.
