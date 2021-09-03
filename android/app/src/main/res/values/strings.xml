@@ -4,4 +4,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="home">Home</string>
     <string name="my_sport">My Sport</string>
+    <string name="title">title</string>
+    <string name="titleValue">titleValue</string>
+    <string name="topicTitle">topicTitle</string>
 </resources>

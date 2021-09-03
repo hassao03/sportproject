@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
+import uk.co.bbc.bbcsportapptechchallenge.ui.SportLayout
 
 class SportAdapter(
     private val sportList: List<SportViewModel>,
@@ -40,3 +41,4 @@ class SportAdapter(
             return oldItem.data == newItem.data
         }
     }
+}
