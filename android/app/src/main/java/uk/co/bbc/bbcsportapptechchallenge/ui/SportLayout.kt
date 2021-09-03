@@ -3,14 +3,15 @@ package uk.co.bbc.bbcsportapptechchallenge.ui
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.ViewDebug
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import com.squareup.picasso.Picasso
 import uk.co.bbc.bbcsportapptechchallenge.R
 import uk.co.bbc.bbcsportapptechchallenge.databinding.FragmentMySportBinding
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportPresenter
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportView
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
+import uk.co.bbc.bbcsportapptechchallenge.util.TimeUtil
 
 class SportLayout @JvmOverloads constructor(
     context: Context,
@@ -34,23 +35,22 @@ class SportLayout @JvmOverloads constructor(
 
     private class ViewDelegate(val binding: FragmentMySportBinding): SportView {
         override fun setTopicTitle(topicTitle: String) {
-//            TODO("Not yet implemented")
         }
 
         override fun setItemTitle(itemTitle: String) {
-//            TODO("Not yet implemented")
+            binding.itemTitle.text = itemTitle
         }
 
         override fun setItemUrl(itemUrl: String) {
-//            TODO("Not yet implemented")
         }
 
         override fun setLastUpdatedTimestamp(lastUpdatedTimestamp: Int) {
-//            TODO("Not yet implemented")
+            binding.lastUpdatedTimestamp.text = lastUpdatedTimestamp.let { lastUpdatedTimestamp.let { TimeUtil
+                .convertTime(it) } }
         }
 
         override fun setImageSize(medium: String) {
-//            TODO("Not yet implemented")
+            Picasso.with(binding.root.context).load(medium).into(binding.itemImage)
         }
 
     }
