@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uk.co.bbc.bbcsportapptechchallenge.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mySportFragment"
+        android:name="uk.co.bbc.bbcsportapptechchallenge.MySportFragment"
+        android:label="fragment_my_sport"
+        tools:layout="@layout/fragment_my_sport" />
+    <fragment
+        android:id="@+id/guideFragment"
+        android:name="uk.co.bbc.bbcsportapptechchallenge.GuideFragment"
+        android:label="fragment_guide"
+        tools:layout="@layout/fragment_guide" />
+    <fragment
+        android:id="@+id/allSportFragment"
+        android:name="uk.co.bbc.bbcsportapptechchallenge.AllSportFragment"
+        android:label="fragment_all_sport"
+        tools:layout="@layout/fragment_all_sport" />
+</navigation>

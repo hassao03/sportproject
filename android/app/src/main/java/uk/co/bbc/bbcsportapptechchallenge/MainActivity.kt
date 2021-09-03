@@ -5,6 +5,10 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,12 +17,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+//        supportActionBar?.setLogo(R.drawable.bbc_sport_logo);
+//        supportActionBar?.set(R.drawable.bbc_sport_logo);
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+//        setSupportActionBar(toolbar)
+
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//        }
+
+        //Initialize the bottom navigation view
+        //create bottom navigation view object
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigatin_view)
+        val navController = findNavController(R.id.nav_fragment)
+        bottomNavigationView.setupWithNavController(navController
+        )
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
