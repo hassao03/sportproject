@@ -9,7 +9,6 @@ import uk.co.bbc.bbcsportapptechchallenge.ui.SportLayout
 
 class SportAdapter(
     private val sportList: List<SportViewModel>,
-    private val onClickListener: OnClickListener
 ) : ListAdapter<SportViewModel, SportAdapter.ViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -19,16 +18,9 @@ class SportAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val sport: SportViewModel = sportList[position]
         holder.component.render(sport)
-        holder.itemView.setOnClickListener {
-            onClickListener.onClick(sport)
-        }
     }
 
     override fun getItemCount() = sportList.size
-
-    class OnClickListener(val clickListener: (sport: SportViewModel) -> Unit) {
-        fun onClick(sport: SportViewModel) = clickListener(sport)
-    }
 
     class ViewHolder(val component: SportLayout) : RecyclerView.ViewHolder(component)
 

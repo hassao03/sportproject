@@ -35,8 +35,7 @@ object Fetch {
                     view.topicTitle.text = list?.let { list.map { it.data.topic.title }[0] }.toString()
                     val recyclerView: RecyclerView? = view.findViewById(R.id.recycler_view)
                     val adapter = list?.let {
-                        SportAdapter(it, SportAdapter.OnClickListener { onClickListener ->
-                        })
+                        SportAdapter(it)
                     }
                     recyclerView?.adapter = adapter
                 }

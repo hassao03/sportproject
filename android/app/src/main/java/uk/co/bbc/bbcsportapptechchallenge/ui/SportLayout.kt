@@ -1,7 +1,9 @@
 package uk.co.bbc.bbcsportapptechchallenge.ui
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.TypedArray
+import android.net.Uri
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -18,14 +20,17 @@ import uk.co.bbc.bbcsportapptechchallenge.presentation.SportView
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
 import uk.co.bbc.bbcsportapptechchallenge.util.TimeUtil
 
+
 class SportLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = R.attr.sportLayoutStyle
 ) : FrameLayout(context, attrs, defStyle) {
 
+    private var model: SportViewModel? = null
     private val binding = FragmentMySportBinding.inflate(LayoutInflater.from(context), this, true)
-    private val presenter = SportPresenter(ViewDelegate(binding))
+    private val viewDelegate = ViewDelegate(binding)
+    private val presenter = SportPresenter(viewDelegate)
 
     init {
         layoutParams = ViewGroup.LayoutParams(
@@ -35,10 +40,19 @@ class SportLayout @JvmOverloads constructor(
 
         setLastUpdatedTextAppearance()
         setItemTitleTextAppearance()
+        openBrowser()
     }
 
     fun render(model: SportViewModel) {
         presenter.render(model)
+        this.model = model
+    }
+
+    private fun openBrowser() {
+        binding.root.setOnClickListener {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(model?.data?.items?.map { it.url }?.get(0)))
+            context.startActivity(browserIntent)
+        }
     }
 
     private fun setItemTitleTextAppearance() {
