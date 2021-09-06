@@ -45,8 +45,8 @@ class SportLayout @JvmOverloads constructor(
         }
 
         override fun setLastUpdatedTimestamp(lastUpdatedTimestamp: Int) {
-            binding.lastUpdatedTimestamp.text = lastUpdatedTimestamp.let { lastUpdatedTimestamp.let { TimeUtil
-                .convertTime(it) } }
+            binding.lastUpdatedTimestamp.text = lastUpdatedTimestamp.let { TimeUtil
+                .convertTime(it) }
         }
 
         override fun setImageSize(medium: String) {

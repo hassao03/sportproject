@@ -31,10 +31,9 @@ object Fetch {
         getUrl()?.getString()?.apply {
             withContext(Dispatchers.Default) {
                 val list = parseJson(this@apply)
-                val sortList = list?.sortedWith(compareBy { it.data.topic.title })
                 withContext(Dispatchers.Main) {
                     val recyclerView: RecyclerView? = view.findViewById(R.id.recycler_view)
-                    val adapter = sortList?.let {
+                    val adapter = list?.let {
                         SportAdapter(it, SportAdapter.OnClickListener { onClickListener ->
                         })
                     }
