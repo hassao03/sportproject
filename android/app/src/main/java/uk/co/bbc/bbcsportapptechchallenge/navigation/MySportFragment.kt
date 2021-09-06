@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.content_main.view.*
 import uk.co.bbc.bbcsportapptechchallenge.R
+import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
+import uk.co.bbc.bbcsportapptechchallenge.ui.ContentLayout
 import uk.co.bbc.bbcsportapptechchallenge.ui.Fetch
 
 // TODO: Rename parameter arguments, choose names that match
@@ -36,7 +39,7 @@ class MySportFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.content_main, container, false)
+        return context?.let { ContentLayout(it) }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

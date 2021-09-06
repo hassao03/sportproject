@@ -20,8 +20,16 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     
     <style name="sportLayout">
+        <item name="topicTitleTextAppearance">@style/topicTitleTextAppearance</item>
         <item name="titleTextAppearance">@style/titleTextAppearance</item>
         <item name="lastUpdatedTextAppearance">@style/lastUpdatedTextAppearance</item>
+    </style>
+
+    <style name="topicTitleTextAppearance">
+        <item name="android:textAppearanceLarge">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 
     <style name="titleTextAppearance">

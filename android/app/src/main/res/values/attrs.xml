@@ -5,6 +5,7 @@
     </declare-styleable>
 
     <declare-styleable name="sportLayout">
+        <attr name="topicTitleTextAppearance" format="reference"/>
         <attr name="titleTextAppearance" format="reference"/>
         <attr name="lastUpdatedTextAppearance" format="reference"/>
     </declare-styleable>

@@ -3,6 +3,7 @@ package uk.co.bbc.bbcsportapptechchallenge.ui
 import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import kotlinx.android.synthetic.main.content_main.view.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,12 +27,12 @@ object Fetch {
         }
     }
 
-
     fun loadData(view: View) = CoroutineScope(Dispatchers.Main).launch(Dispatchers.IO) {
         getUrl()?.getString()?.apply {
             withContext(Dispatchers.Default) {
                 val list = parseJson(this@apply)
                 withContext(Dispatchers.Main) {
+                    view.topicTitle.text = list?.let { list.map { it.data.topic.title }[0] }.toString()
                     val recyclerView: RecyclerView? = view.findViewById(R.id.recycler_view)
                     val adapter = list?.let {
                         SportAdapter(it, SportAdapter.OnClickListener { onClickListener ->

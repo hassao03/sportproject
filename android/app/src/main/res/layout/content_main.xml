@@ -25,12 +25,13 @@
 
         <ImageView
             android:id="@+id/topicArrowImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="65dp"
+            android:scaleHeight="10%"
             android:src="@drawable/arrow_right"
-            tools:srcCompat="@drawable/arrow_right"/>
+            tools:srcCompat="@drawable/arrow_right" />
 
     </LinearLayout>
 
