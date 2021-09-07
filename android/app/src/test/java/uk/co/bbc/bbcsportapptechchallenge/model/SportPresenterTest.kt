@@ -46,13 +46,13 @@ class SportPresenterTest {
 
     @Test
     fun `sets image size`() {
-        val imageSize = "https://ichef.bbci.co.uk/onesport/cps/320/cpsprodpb/16477/production/_103855219_schumacher.jpg"
+        val image = "https://ichef.bbci.co.uk/onesport/cps/320/cpsprodpb/16477/production/_103855219_schumacher.jpg"
         val model = createModel()
         val sut = createPresenter()
 
         sut.render(model)
 
-        verify(view).setImageSize(imageSize)
+        verify(view).setImageSize(image)
     }
 
     private fun createPresenter(): SportPresenter {

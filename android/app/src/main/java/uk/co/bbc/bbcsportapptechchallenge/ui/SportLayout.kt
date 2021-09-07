@@ -95,12 +95,11 @@ class SportLayout @JvmOverloads constructor(
         }
 
         override fun setLastUpdatedTimestamp(lastUpdatedTimestamp: Int) {
-            binding.lastUpdatedTimestamp.text = lastUpdatedTimestamp.let { TimeUtil
-                .convertTime(it) }
+            binding.lastUpdatedTimestamp.text = lastUpdatedTimestamp.let { TimeUtil.convertTime(it) }
         }
 
-        override fun setImageSize(medium: String) {
-            Picasso.with(binding.root.context).load(medium).into(binding.itemImage)
+        override fun setImageSize(image: String) {
+            Picasso.with(binding.root.context).load(image).into(binding.itemImage)
         }
     }
 }

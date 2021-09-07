@@ -8,7 +8,7 @@ import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
 import uk.co.bbc.bbcsportapptechchallenge.ui.SportLayout
 
 class SportAdapter(
-    private val sportList: List<SportViewModel>,
+    private val sportList: List<SportViewModel>
 ) : ListAdapter<SportViewModel, SportAdapter.ViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
