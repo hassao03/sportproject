@@ -12,6 +12,8 @@ import uk.co.bbc.bbcsportapptechchallenge.R
 import uk.co.bbc.bbcsportapptechchallenge.adapter.SportAdapter
 import uk.co.bbc.bbcsportapptechchallenge.mapper.getString
 import uk.co.bbc.bbcsportapptechchallenge.mapper.parseJson
+import uk.co.bbc.bbcsportapptechchallenge.stats.StatsEvent
+import uk.co.bbc.bbcsportapptechchallenge.stats.StatsPostEvent
 import java.net.MalformedURLException
 import java.net.URL
 
@@ -22,6 +24,7 @@ object Fetch {
         return try {
             URL(BASE_URL)
         } catch (e: MalformedURLException) {
+            StatsPostEvent.sendStats(StatsEvent.ERROR, e.toString())
             Log.d("Exception", e.toString())
             null
         }

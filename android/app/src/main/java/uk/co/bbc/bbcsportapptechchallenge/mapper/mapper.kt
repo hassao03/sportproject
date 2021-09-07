@@ -60,7 +60,7 @@ fun parseJson(data: String): List<SportViewModel>? {
             val copyrightHolder = image.getString("large")
 
             list.add(
-                convertDataItemToModelItem(
+                convertToViewModel(
                     SportData(
                         Data(
                             Topic(topicTitle, topicUrl), listOf(
@@ -92,6 +92,6 @@ fun parseJson(data: String): List<SportViewModel>? {
     return list
 }
 
-private fun convertDataItemToModelItem(dataItem: SportData): SportViewModel {
+private fun convertToViewModel(dataItem: SportData): SportViewModel {
     return dataItem.toViewModel()
 }
