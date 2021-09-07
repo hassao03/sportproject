@@ -34,17 +34,6 @@ class SportPresenterTest {
     }
 
     @Test
-    fun `sets item url`() {
-        val itemUrl = "https://www.bbc.co.uk/sport/motorsport/45851176"
-        val model = createModel()
-        val sut = createPresenter()
-
-        sut.render(model)
-
-        verify(view).setItemUrl(itemUrl)
-    }
-
-    @Test
     fun `sets last updated timestamp`() {
         val lastUpdatedTimestamp = 1539529691
         val model = createModel()

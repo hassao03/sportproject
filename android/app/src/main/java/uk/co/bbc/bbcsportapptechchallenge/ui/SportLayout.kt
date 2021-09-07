@@ -88,14 +88,10 @@ class SportLayout @JvmOverloads constructor(
     }
 
     private class ViewDelegate(val binding: FragmentMySportBinding): SportView {
-        override fun setTopicTitle(topicTitle: String) {
-        }
+        override fun setTopicTitle(topicTitle: String) {}
 
         override fun setItemTitle(itemTitle: String) {
             binding.itemTitle.text = itemTitle
-        }
-
-        override fun setItemUrl(itemUrl: String) {
         }
 
         override fun setLastUpdatedTimestamp(lastUpdatedTimestamp: Int) {

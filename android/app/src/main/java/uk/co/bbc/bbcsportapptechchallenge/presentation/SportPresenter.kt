@@ -9,7 +9,6 @@ internal class SportPresenter(
             data.items.map {
                 with(it) {
                     view.setItemTitle(title)
-                    view.setItemUrl(url)
                     view.setLastUpdatedTimestamp(lastUpdatedTimestamp)
                     view.setImageSize(image.medium)
                 }
