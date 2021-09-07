@@ -6,10 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.content_main.view.*
+import uk.co.bbc.bbcsportapptechchallenge.MainActivity
 import uk.co.bbc.bbcsportapptechchallenge.R
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
+import uk.co.bbc.bbcsportapptechchallenge.stats.StatsEvent
+import uk.co.bbc.bbcsportapptechchallenge.stats.StatsPostEvent
 import uk.co.bbc.bbcsportapptechchallenge.ui.ContentLayout
 import uk.co.bbc.bbcsportapptechchallenge.ui.Fetch
+import kotlin.system.measureTimeMillis
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,7 +49,11 @@ class MySportFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Fetch.loadData(view)
+        val fetchElapsedTime = measureTimeMillis {
+            Fetch.loadData(view)
+        }
+
+        StatsPostEvent.sendStats(StatsEvent.LOAD,fetchElapsedTime.toString())
     }
 
     companion object {
