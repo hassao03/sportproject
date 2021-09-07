@@ -20,7 +20,6 @@ import uk.co.bbc.bbcsportapptechchallenge.presentation.SportView
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
 import uk.co.bbc.bbcsportapptechchallenge.util.TimeUtil
 
-
 class SportLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
@@ -107,6 +106,5 @@ class SportLayout @JvmOverloads constructor(
         override fun setImageSize(medium: String) {
             Picasso.with(binding.root.context).load(medium).into(binding.itemImage)
         }
-
     }
 }

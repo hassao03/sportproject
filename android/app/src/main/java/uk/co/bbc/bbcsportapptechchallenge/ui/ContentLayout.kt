@@ -51,5 +51,4 @@ class ContentLayout @JvmOverloads constructor(
             R.style.sportLayout
         )
     }
-
 }

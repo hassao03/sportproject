@@ -9,5 +9,4 @@
         <attr name="titleTextAppearance" format="reference"/>
         <attr name="lastUpdatedTextAppearance" format="reference"/>
     </declare-styleable>
-
 </resources>
