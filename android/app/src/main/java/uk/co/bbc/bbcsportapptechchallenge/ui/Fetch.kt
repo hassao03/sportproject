@@ -32,16 +32,14 @@ object Fetch {
 
     fun loadData(view: View) = CoroutineScope(Dispatchers.Main).launch(Dispatchers.IO) {
         getUrl()?.getString()?.apply {
-            withContext(Dispatchers.Default) {
+            withContext(Dispatchers.Main) {
                 val list = parseJson(this@apply)
-                withContext(Dispatchers.Main) {
-                    view.topicTitle.text = list?.let { list.map { it.data.topic.title }[0] }.toString()
-                    val recyclerView: RecyclerView? = view.findViewById(R.id.recycler_view)
-                    val adapter = list?.let {
-                        SportAdapter(it)
-                    }
-                    recyclerView?.adapter = adapter
+                view.topicTitle.text = list?.let { list.map { it.data.topic.title }[0] }.toString()
+                val recyclerView: RecyclerView? = view.findViewById(R.id.recycler_view)
+                val adapter = list?.let {
+                    SportAdapter(it)
                 }
+                recyclerView?.adapter = adapter
             }
         }
     }
