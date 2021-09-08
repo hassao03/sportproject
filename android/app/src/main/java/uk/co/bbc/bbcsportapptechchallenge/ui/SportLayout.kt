@@ -20,7 +20,7 @@ import uk.co.bbc.bbcsportapptechchallenge.presentation.SportView
 import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
 import uk.co.bbc.bbcsportapptechchallenge.util.TimeUtil
 
-class SportLayout @JvmOverloads constructor(
+class SportLayout constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = R.attr.sportLayoutStyle

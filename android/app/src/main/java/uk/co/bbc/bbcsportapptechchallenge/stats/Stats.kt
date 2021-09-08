@@ -42,7 +42,7 @@ object StatsPostEvent {
         map["event"] = postEvent.event
         map["data"] = data
 
-        val mainScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
+        val mainScope = CoroutineScope(Dispatchers.Main + Job())
 
         mainScope.launch {
             withContext(Dispatchers.IO) {
