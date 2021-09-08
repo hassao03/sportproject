@@ -1,14 +1,10 @@
 package uk.co.bbc.bbcsportapptechchallenge.navigation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.content_main.view.*
-import uk.co.bbc.bbcsportapptechchallenge.MainActivity
-import uk.co.bbc.bbcsportapptechchallenge.R
-import uk.co.bbc.bbcsportapptechchallenge.presentation.SportViewModel
+import androidx.fragment.app.Fragment
 import uk.co.bbc.bbcsportapptechchallenge.stats.StatsEvent
 import uk.co.bbc.bbcsportapptechchallenge.stats.StatsPostEvent
 import uk.co.bbc.bbcsportapptechchallenge.ui.ContentLayout

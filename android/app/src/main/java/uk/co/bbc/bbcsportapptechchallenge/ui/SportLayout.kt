@@ -24,7 +24,7 @@ class SportLayout constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = R.attr.sportLayoutStyle
-) : FrameLayout(context, attrs, defStyle) {
+) : FrameLayout(context, attrs, defStyle), Component<SportViewModel>{
 
     private var model: SportViewModel? = null
     private val binding = FragmentMySportBinding.inflate(LayoutInflater.from(context), this, true)
@@ -32,17 +32,12 @@ class SportLayout constructor(
     private val presenter = SportPresenter(viewDelegate)
 
     init {
-        layoutParams = ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        )
-
         setLastUpdatedTextAppearance()
         setItemTitleTextAppearance()
         openBrowser()
     }
 
-    fun render(model: SportViewModel) {
+    override fun render(model: SportViewModel) {
         presenter.render(model)
         this.model = model
     }
