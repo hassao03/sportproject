@@ -8,7 +8,7 @@ import java.net.URL
 import java.util.*
 
 sealed class StatsEvent(val event: String) {
-    object Display : StatsEvent("display")
+    object DISPLAY : StatsEvent("display")
     object LOAD : StatsEvent("load")
     object ERROR : StatsEvent("error")
 }
