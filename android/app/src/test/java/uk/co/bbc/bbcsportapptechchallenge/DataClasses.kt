@@ -30,18 +30,18 @@ object DataClasses {
     private fun items(): List<Items> {
         return listOf(
             Items(
-            "type",
-            "Schumacher junior wins European F3 title with race to spare",
-            "https://www.bbc.co.uk/sport/motorsport/45851176",
-            "sectionLabel",
-            "sectionUrl",
-            false,
-            "lastUpdatedText",
-            "mediaType",
-            "contentType",
+                "type",
+                "Schumacher junior wins European F3 title with race to spare",
+                "https://www.bbc.co.uk/sport/motorsport/45851176",
+                "sectionLabel",
+                "sectionUrl",
+                false,
+                "lastUpdatedText",
+                "mediaType",
+                "contentType",
                 1539529691,
-            image()
-        )
+                image()
+            )
         )
     }
 

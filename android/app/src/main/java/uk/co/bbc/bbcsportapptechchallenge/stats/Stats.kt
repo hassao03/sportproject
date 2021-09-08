@@ -18,8 +18,8 @@ object StatsPostEvent {
     private fun makeRequest(stringUrl: String?): HttpURLConnection {
         val url = URL(stringUrl)
         val urlConnection: HttpURLConnection = url.openConnection() as HttpURLConnection
-        urlConnection.connectTimeout = 100000
-        urlConnection.readTimeout = 100000
+        urlConnection.connectTimeout = 10000
+        urlConnection.readTimeout = 10000
         urlConnection.instanceFollowRedirects = true
         urlConnection.connect()
 

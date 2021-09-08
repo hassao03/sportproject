@@ -9,7 +9,7 @@ import uk.co.bbc.bbcsportapptechchallenge.mapper.toViewModel
 class SportMappingTest {
 
     @Test
-    fun `converts sport to sport view model`(){
+    fun `converts sport to sport view model`() {
         val sport = createSport()
         val model = createModel()
 

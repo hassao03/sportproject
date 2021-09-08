@@ -9,7 +9,7 @@ import uk.co.bbc.bbcsportapptechchallenge.presentation.SportView
 
 class SportPresenterTest {
 
-    private val view = mock <SportView>()
+    private val view = mock<SportView>()
 
     @Test
     fun `sets topic title`() {

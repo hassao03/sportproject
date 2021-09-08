@@ -4,6 +4,7 @@ import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 import uk.co.bbc.bbcsportapptechchallenge.presentation.*
+import uk.co.bbc.bbcsportapptechchallenge.ui.Fetch
 import java.io.BufferedReader
 import java.io.IOException
 import java.io.InputStreamReader
